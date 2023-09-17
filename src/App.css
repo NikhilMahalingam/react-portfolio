@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Roslindale';
+  src: url('/fonts/RoslindaleDisplayCondensedRegular.woff2') format('woff2'),
+       url('/fonts/RoslindaleDisplayCondensedRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
