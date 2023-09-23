@@ -1,4 +1,3 @@
-import React from 'react'
 import './Nav.css'
 import {useState} from 'react';
 import {Link} from 'react-router-dom'
@@ -11,10 +10,11 @@ const Nav = () => {
     <div className="nav">
         <div className="nav-container">
             <div className="navbar">
-                <div className="logo" style={{
+                <Link to='/' onClick={() => setNavOpen(!navOpen)}
+                className="logo" style={{
                 color: navOpen ? "white": "black",
                 transitionDelay: "0.1s"
-            }}>NM.</div>
+            }}>NM.</Link>
                 <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
                     <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
                         <span className={navOpen ? "lineTop spin" : "lineTop"}
@@ -48,7 +48,7 @@ const Nav = () => {
                         <div className="nav-item-wrapper"></div>
                     </li>
                     <li className="nav-item">
-                        <Link to="/" onClick={() => setNavOpen(!navOpen)}
+                        <Link to="/About" onClick={() => setNavOpen(!navOpen)}
                         style={{
                             top: navOpen ? "0": "120px",
                             transitionDelay: navOpen ? "0.9s": "0s"
@@ -57,7 +57,7 @@ const Nav = () => {
                         <div className="nav-item-wrapper"></div>
                     </li>
                     <li className="nav-item">
-                        <Link to="/" onClick={() => setNavOpen(!navOpen)}
+                        <Link to="/Projects" onClick={() => setNavOpen(!navOpen)}
                         style={{
                             top: navOpen ? "0": "120px",
                             transitionDelay: navOpen ? "1s": "0s"

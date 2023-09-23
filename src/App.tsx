@@ -1,7 +1,9 @@
 import './App.css'
 import Nav from './components/Nav'
-import LandingPage from './components/LandingPage';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import About from './pages/About'
+import Projects from './pages/Projects';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
 
@@ -9,10 +11,15 @@ function App() {
     <>
     <Router>
       <Nav/>
-      <LandingPage firstName="Nikhil" lastName="Mahalingam"/>
-    </Router>
+      <Routes>
+        <Route path='/' element={<LandingPage firstName="Nikhil" lastName="Mahalingam"/>}/>
+        <Route path='/About' element={<About/>}/>
+        <Route path='/Projects' element={<Projects/>}/>
+      </Routes>
 
-    </>
+
+    </Router>
+  </>
   )
 }
 
