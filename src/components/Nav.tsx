@@ -1,37 +1,37 @@
 import './Nav.css'
 import {useState} from 'react';
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 
 const Nav = () => {
 
-  const[navOpen, setNavOpen] = useState(false);
-
-  return (
-    <div className="nav">
+    const [navOpen, setNavOpen] = useState(false);
+    const location = useLocation();
+    const isAboutPage = location.pathname === '/About';
+  
+    return (
+      <div className="nav">
         <div className="nav-container">
-            <div className="navbar">
-                <Link to='/' onClick={() => setNavOpen(!navOpen)}
-                className="logo" style={{
-                color: navOpen ? "white": "black",
+          <div className="navbar">
+            <Link to='/' onClick={() => setNavOpen(!navOpen)}
+              className="logo" style={{
+                color: navOpen || isAboutPage ? "white" : "black",
                 transitionDelay: "0.1s"
-            }}>NM.</Link>
-                <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
-                    <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
-                        <span className={navOpen ? "lineTop spin" : "lineTop"}
-
-                        style={{
-                            background: navOpen ? "white": "black",
-                            transitionDelay: "0.1s"
-                        }}></span>
-                        <span className={navOpen ? "lineBottom spin" : "lineBottom"}
-
-                        style={{
-                            background: navOpen ? "white": "black",
-                            transitionDelay: "0.1s"
-                        }}></span>
-                    </div>
-                </div>
+              }}>NM.</Link>
+            <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
+              <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
+                <span className={navOpen ? "lineTop spin" : "lineTop"}
+                  style={{
+                    background: navOpen || isAboutPage ? "white" : "black",
+                    transitionDelay: "0.1s"
+                  }}></span>
+                <span className={navOpen ? "lineBottom spin" : "lineBottom"}
+                  style={{
+                    background: navOpen || isAboutPage ? "white" : "black",
+                    transitionDelay: "0.1s"
+                  }}></span>
+              </div>
             </div>
+          </div>
             <div className='nav-overlay' style={{
                 top: navOpen ? "0": "-100%",
                 transitionDelay: navOpen ? "0s" : "0s",
