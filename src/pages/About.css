@@ -3,24 +3,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap');
 
 body{
-  background-color: black;
+  background-color: #fff9ed00;
   margin: 0;
 }
+
+.parent-container{
+  background-color: #18181c;
+}
 .about-container {
-    background-color: black;
+    background-color: #18181c;
     color: white;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    top: 50%;
-    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    grid-gap: 20px; /* Space between the columns */
     justify-content: center;
     align-items: center;
+    margin-inline: 70px;
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) { /* Medium screens */
+    .about-container {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+      grid-template-rows: auto auto; /* Two rows for medium screens */
+    }
+    
+    .work-experience {
+      grid-column: span 2; /* Work experience spans two columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 600px) { /* Small screens */
+    .about-container {
+      grid-template-columns: 1fr; /* One column for small screens */
+    }
+  }
+
+  .image-text-container {
+    flex: 1; /* Take up the remaining space */
+    min-width: 250px; /* Adjust as needed */
+  }
+  
+  .work-experience {
+    text-align: center;
+    font-family: 'Roslindale';
+    color: rgb(255, 255, 255);
+    animation: textGrow 2s ease-in forwards;
+    opacity: 0;
+    display: block; /* Stack child elements vertically */
+  }
+
+  .section-title {
+    font-size: 60px;
+    text-decoration: underline;
+    float: none;
+  }
+  
+  .experience-item {
+    margin-bottom: 20px;
+    float: none;
+  }
+  
+  .position-title {
+    font-size: 32px;
+    margin-block: 5px;
+  }
+  
+  .company-container {
+    display: flex;
+    align-items: center; /* Align the logo and the company name vertically */
+    justify-content: center; /* Center the logo and the company name horizontally */
+    margin-bottom: 10px; /* Space below the company container */
+  }
+  
+  .company-logo {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .company-name {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .date{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .description {
+    font-size: 20px;
+    color:#dbdbdb;
+    margin-bottom: 5px;
+  }
+
+  .skills{
+    font-size: 18px;
+    margin-bottom: 40px;
+    color:#b1b1b1;
+  }
+
+  .text-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .skills-text {
+    font-family: 'Roslindale';
+    color: rgb(209, 209, 209); 
+    font-size: 30px;
+    text-align: center; 
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  .skills-text2 {
+    font-family: 'Roslindale';
+    color: rgb(180, 180, 180); 
+    font-size: 20px;
+    text-align: center; 
+    margin-bottom: 5px;
+  }
+
+  .underline{
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .image-text-container, .work-experience {
+      flex: 100%; /* Stack on smaller screens */
+    }
   }
   
   .image-container {
-    position: relative;
-    width: 50%; /* or any desired width */
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .image-container::before {
@@ -30,40 +156,57 @@ body{
     left: 0;
     width: 100%;
     height: 50%; /* Adjust as needed to control the height of the gradient */
-    background: linear-gradient(to top, black, transparent);
+
     pointer-events: none; /* Ensure the gradient does not interfere with click events */
   }
   
   
 .image-container img {
     margin: auto;
-    opacity: 0;
-    display: flex;
+    opacity: 0.8;
+    display: block;
     width: 60%;
-    min-width: 300px;
+    min-width: 250px;
     height: auto;
     transform: scale(0.9); /* Start at half the original size */
-    animation: growIn 1.2s ease-in forwards;
+    animation: float 3s ease-in-out infinite;
     filter: blur(0.7px);
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
+
+  .image-text-container {
+    position: relative;
   }
   
   @keyframes growIn {
     to {
       transform: scale(1);
-      opacity: 0.7;
+      opacity: 0.6;
     }
   }
   
   
 .overlay-text {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
+  display: flex;
+  margin-inline: 20px;
+  font-size: 50px;
   text-align: center;
-  font-family: 'Kanit';
-  color: rgb(128, 128, 128);
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roslindale';
+  color: rgb(255, 255, 255);
   animation: textGrow 2s ease-in forwards;
   opacity: 0;
 }
@@ -71,6 +214,12 @@ body{
   @keyframes textGrow {
     to {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .overlay-text {
+      font-size: 25px; /* Adjust as needed */
     }
   }
 
@@ -82,7 +231,7 @@ body{
 
   @media (max-width: 480px) {
     .overlay-text {
-      font-size: 16px; /* Adjust as needed */
+      font-size: 13px; /* Adjust as needed */
     }
   }
 

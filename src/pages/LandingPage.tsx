@@ -12,8 +12,8 @@ const LandingPage: React.FC<Props> = ({ firstName, lastName }) => {
   return (
       <div className="landing-container">
         <p className="small-text">Hi, I am</p>
-        <p className="name-text" data-text={firstName}>{firstName}</p>
-        <p className="name-text" data-text={lastName}>{lastName}</p>
+        <p className="name-text1" data-text={firstName}>{firstName}</p>
+        <p className="name-text2" data-text={lastName}>{lastName}</p>
         <Link to="/About"className="about-me-button">About Me →</Link>
       </div>
 
