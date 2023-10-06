@@ -9,14 +9,14 @@ import Aresty from '../components/images/Aresty.jfif'
 
 const About = () => {
   return (
-    <>
+    <div>
       <Nav/>
       <div className="parent-container">
         <div className="about-container">
+          <div className='text-container'>
           <div className="image-container">
             <img src={img} alt="Description" />
           </div>
-          <div className='text-container'>
           <p className="overlay-text">I am an undergraduate student at Rutgers University - New Brunswick. I am double majoring in Electrical/Computer Engineering and Computer Science and minoring in Mathematics. 
           <br></br><br></br>My career goals are to either be an electrical electrical for the aerospace/automotive industry or a ML/AI or Software Engineer.
           <br></br><br></br>Skills:
@@ -78,11 +78,9 @@ const About = () => {
               <p className="skills">Microsoft Excel · Research · Data Analysis</p>
             </section>
         </div>
-
         </div>
-
       </div>
-    </>
+      </div>
   );
 }
 
