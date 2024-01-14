@@ -6,7 +6,7 @@ const Nav = () => {
 
     const [navOpen, setNavOpen] = useState(false);
     const location = useLocation();
-    const isAboutPage = location.pathname === '/About';
+    const isAboutPage = location.pathname === '/About' || location.pathname === '/Experience';
   
     return (
       <div className="nav">
@@ -54,6 +54,15 @@ const Nav = () => {
                             transitionDelay: navOpen ? "0.9s": "0s"
                         }}
                         >About</Link>
+                        <div className="nav-item-wrapper"></div>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/Experience" onClick={() => setNavOpen(!navOpen)}
+                        style={{
+                            top: navOpen ? "0": "120px",
+                            transitionDelay: navOpen ? "0.9s": "0s"
+                        }}
+                        >Experience</Link>
                         <div className="nav-item-wrapper"></div>
                     </li>
                     <li className="nav-item">
