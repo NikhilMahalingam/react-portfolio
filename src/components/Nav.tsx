@@ -6,7 +6,7 @@ const Nav = () => {
 
     const [navOpen, setNavOpen] = useState(false);
     const location = useLocation();
-    const isAboutPage = location.pathname === '/About' || location.pathname === '/Experience';
+    const isAboutPage = location.pathname === '/About' || location.pathname === '/Experience' || location.pathname === '/Projects';
   
     return (
       <div className="nav">

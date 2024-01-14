@@ -67,6 +67,8 @@ html, body{
     grid-column: 1 / -1;
     text-decoration: underline;
     margin-bottom: 10px;
+    animation: textGrow 2s ease-in forwards;
+    opacity: 0;
   }
 
   .skills-text2 {
@@ -76,6 +78,8 @@ html, body{
     text-align: center; 
     grid-column: 1 / -1;
     margin-bottom: 10px;
+    animation: textGrow 2s ease-in forwards;
+    opacity: 0;
   }
 
   .underline{
@@ -190,12 +194,14 @@ html, body{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5%;
   }
 
   .section-title {
     font-size: 60px;
     text-decoration: underline;
     float: none;
+    margin-bottom: 16px;
   }
   
   .experience-item {

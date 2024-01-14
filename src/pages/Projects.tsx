@@ -1,5 +1,5 @@
 import React from 'react';
-import './LandingPage.css';
+import './Projects.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Projects = () => {

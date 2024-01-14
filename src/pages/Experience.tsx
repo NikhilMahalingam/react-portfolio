@@ -20,7 +20,7 @@ const Experience = () => {
             <h2 className="section-title">Work Experience</h2>
 
             <section className="experience-item">
-              <h3 className="position-title">AI Research Assistant</h3>
+              <h3 className="position-title">ML/AI Research Assistant</h3>
               <div className="company-container">
                 <img src={Aresty} alt="Company Logo" className="company-logo" />
                 <span className="company-name">Aresty Research Center - Rutgers University </span>
@@ -42,7 +42,7 @@ const Experience = () => {
             </section>
 
             <section className="experience-item">
-              <h3 className="position-title">Web Development</h3>
+              <h3 className="position-title">Web Engineer Intern</h3>
               <div className="company-container">
                 <img src={McGill} alt="Company Logo" className="company-logo" />
                 <span className="company-name">McGill University</span>
@@ -59,7 +59,7 @@ const Experience = () => {
                 <span className="company-name">McGill University - Health Center</span>
               </div>
               <p className="date">(Summer 2021)</p>
-              <p className="description">Extracted data from medical studies about endometriosis and utilized Microsoft Excel to create graphs to visualize trends about pain factors· medication· bias· etc.</p>
+              <p className="description">Extracted data from medical studies about endometriosis and utilized Microsoft Excel to create graphs to visualize trends about pain factors, medication, bias etc.</p>
               <p className="skills">Microsoft Excel · Research · Data Analysis</p>
             </section>
         </div>
