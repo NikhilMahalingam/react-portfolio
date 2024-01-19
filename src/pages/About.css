@@ -92,7 +92,7 @@ html, body{
     }
   }
   
-  .image-container {
+ #specificPage .image-container {
     display: flex;
     height: auto;
     margin-top: 5%;
@@ -102,7 +102,7 @@ html, body{
   }
   
   
-.image-container img {
+  #specificPage .image-container img {
     opacity: 0.8;
     width: 50%;
     min-width: 250px;

@@ -1,40 +1,101 @@
 .project-card {
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589);
     transition: all 0.3s ease-in-out;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .project-image-container {
+    position: relative;
+    width: 500px;
+    display: block; /* Ensures that the container doesn't collapse */
   }
   
   .project-image {
     width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
   }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .title {
+    position: absolute;
+    font-family: 'Roslindale';
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+
+
+  .project-card:hover .overlay{
+    opacity: 0;
+  }
+
+
+
   
   .project-link {
+    font-family: 'Roslindale';
     display: block;
     text-align: center;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: #101010;
+    color: #c4c4c4;
     text-decoration: none;
     font-weight: bold;
+    width: 500px;
+    transition: 0.3s;
+  }
+
+  .project-link:hover{
+    background-color: #000000;
   }
   
   .read-more {
+    font-family: 'Roslindale';
     background: none;
     border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 16px;
-    color: #007bff;
+    color: #c4c4c4;
+    width: 500px;
+    transition:0.3s;
+  }
+
+  .read-more:hover{
+    background-color: #000000;
   }
   
   .project-description {
     padding: 10px;
     text-align: justify;
+    width: 500px;
   }
   
   .expanded {
     max-height: none;
+  }
+
+  .project-card, .image-container, .project-image {
+    box-sizing: border-box;
   }
