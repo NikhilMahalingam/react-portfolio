@@ -1,4 +1,11 @@
-/* LandingPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap');
+html, body{
+  background-color: #18181c !important;
+  margin: 0;
+  padding:0;
+  height: 100%;
+}
+
 .landing-container {
     font-family: 'Roslindale', sans-serif;
     text-align: center;
@@ -10,58 +17,74 @@
   }
   
   .small-text {
-    font-size: 24px;
+    font-size: 28px;
+    color: #fff8ed;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
   }
   
   .name-text1 {
     font-size: 148px;
     color: transparent;
-    -webkit-text-stroke: 1.5px black;
+    -webkit-text-stroke: 1.5px #fff8ed;
     position: relative;
     overflow: hidden;
+    animation: float 3s ease-in-out infinite;
   }
 
   .name-text2 {
     font-size: 148px;
-    color: black;
-    -webkit-text-stroke: 1.5px black;
+    color: #fff8ed;
+    -webkit-text-stroke: 1.5px #fff8ed;
     position: relative;
     overflow: hidden;
+    animation: float 3s ease-in-out infinite;
   }
 
   @media (max-width: 768px) {
     .name-text1 {
-      font-size: 96px; /* Adjust as needed */
+      font-size: 96px; 
     }
   }
 
   @media (max-width: 480px) {
     .name-text1 {
-      font-size: 64px; /* Adjust as needed */
+      font-size: 64px; 
     }
   }
 
   @media (max-width: 300px) {
     .name-text1 {
-      font-size: 45px; /* Adjust as needed */
+      font-size: 45px; 
     }
   }
 
   @media (max-width: 768px) {
     .name-text2 {
-      font-size: 96px; /* Adjust as needed */
+      font-size: 96px; 
     }
   }
 
   @media (max-width: 480px) {
     .name-text2 {
-      font-size: 64px; /* Adjust as needed */
+      font-size: 64px; 
     }
   }
 
   @media (max-width: 300px) {
     .name-text2 {
-      font-size: 45px; /* Adjust as needed */
+      font-size: 45px; 
     }
   }
   
@@ -71,7 +94,7 @@
     top: 0;
     left: 0;
     width: 0;
-    color: black;
+    color: #fff8ed;
     white-space: nowrap;
     overflow: hidden;
     animation: fillIn 2s forwards;
@@ -84,7 +107,7 @@
     top: 0;
     left: 0;
     width: 0;
-    color: #fff8ed;
+    color: #18181c;
     white-space: nowrap;
     overflow: hidden;
     animation: fillIn 2s forwards;
@@ -105,8 +128,8 @@
   font-family: 'Roslindale', sans-serif;
   font-size: 32px;
   text-decoration: underline;
-  color: black;
-  -webkit-text-stroke: 1px black;
+  color: #fff8ed;
+  -webkit-text-stroke: 1px #fff8ed;
   transition: transform 0.3s ease-in-out;
 }
 

@@ -92,7 +92,7 @@ html, body{
     }
   }
   
- #specificPage .image-container {
+.image-container {
     display: flex;
     height: auto;
     margin-top: 5%;
@@ -102,9 +102,9 @@ html, body{
   }
   
   
-  #specificPage .image-container img {
+ .image-container img {
     opacity: 0.8;
-    width: 50%;
+    width: 50% !important;
     min-width: 250px;
     height: auto;
     transform: scale(0.9); /* Start at half the original size */

@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap');
 html, body{
-  background-color: #18181c !important;
+  background-color: #18181c;
   margin: 0;
   padding:0;
-  height: 100%;
+  height: 2vh;
 }
 
 .project-collection{
   display: grid;
   grid-template-columns: auto auto;
   grid-auto-rows: auto;
-  gap: 10rem;
+  gap: 8rem;
   align-items: start;
   justify-content: center;
   margin-top: 5%;

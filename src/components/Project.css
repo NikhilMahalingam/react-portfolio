@@ -7,6 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    margin-bottom: 30px;
   }
 
   .project-image-container {
@@ -64,6 +65,7 @@
     font-weight: bold;
     width: 500px;
     transition: 0.3s;
+    font-size: 20px;
   }
 
   .project-link:hover{
@@ -76,7 +78,7 @@
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 22px;
     color: #c4c4c4;
     width: 500px;
     transition:0.3s;
@@ -90,6 +92,8 @@
     padding: 10px;
     text-align: justify;
     width: 500px;
+    color: white;
+    font-family: 'Roslindale';
   }
   
   .expanded {
