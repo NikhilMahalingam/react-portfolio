@@ -89,7 +89,8 @@
   }
   
   .project-description {
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
     text-align: justify;
     width: 500px;
     color: white;
