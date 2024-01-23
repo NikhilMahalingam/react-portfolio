@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './ProjectsPage.css';
 import Nav from '../components/Nav';
 import Project from '../components/Project';

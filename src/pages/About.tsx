@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './About.css';
 import Nav from '../components/Nav';
 import img from '../components/images/Nikhil About 2.png'

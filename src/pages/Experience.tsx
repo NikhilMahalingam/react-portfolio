@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import './About.css';
 import Nav from '../components/Nav';
 import McGill from '../components/images/McGill.jfif'
