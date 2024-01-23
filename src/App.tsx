@@ -13,6 +13,7 @@ function App() {
     <Router>
       <Nav/>
       <Routes>
+        <Route path='/react-portfolio' element={<LandingPage firstName="Nikhil" lastName="Mahalingam"/>}/>
         <Route path='/' element={<LandingPage firstName="Nikhil" lastName="Mahalingam"/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Projects' element={<Projects/>}/>
