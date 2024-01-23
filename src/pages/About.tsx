@@ -1,11 +1,7 @@
-
 import React from 'react';
 import './About.css';
 import Nav from '../components/Nav';
 import img from '../components/images/Nikhil About 2.png'
-import McGill from '../components/images/McGill.jfif'
-import MLB from '../components/images/MLB.jfif'
-import Aresty from '../components/images/Aresty.jfif'
 
 const About = () => {
   return (
