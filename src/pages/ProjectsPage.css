@@ -15,3 +15,19 @@ html, body{
   justify-content: center;
   margin-top: 5%;
 }
+
+/* Medium screens (less than 1000px) */
+@media (max-width: 1000px) {
+  .project-collection {
+    grid-template-columns: auto; /* Single column layout for medium screens */
+    gap: 6rem;
+  }
+}
+
+/* Small screens (less than 600px) */
+@media (max-width: 600px) {
+  .project-collection {
+    grid-template-columns: auto; /* Single column layout for small screens */
+    gap: 4rem;
+  }
+}

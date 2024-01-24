@@ -104,3 +104,30 @@
   .project-card, .image-container, .project-image {
     box-sizing: border-box;
   }
+
+  /* Medium screens (less than 1000px) */
+@media (max-width: 1000px) {
+  .project-card, 
+  .project-image-container, 
+  .project-link, 
+  .read-more,
+  .project-description {
+    width: 400px; /* Adjust the width as needed for medium screens */
+  }
+}
+
+/* Small screens (less than 600px) */
+@media (max-width: 600px) {
+  .project-collection {
+    grid-template-columns: auto; /* Single column layout */
+    gap: 4rem; /* Adjust gap if needed */
+  }
+
+  .project-card, 
+  .project-image-container, 
+  .project-link, 
+  .read-more,
+  .project-description {
+    width: 300px; /* Adjust the width as needed for small screens */
+  }
+}
